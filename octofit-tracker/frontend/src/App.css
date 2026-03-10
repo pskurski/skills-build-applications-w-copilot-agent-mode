@@ -1,0 +1,61 @@
+:root {
+  --octo-bg-start: #f6f8fb;
+  --octo-bg-end: #e9f1ff;
+  --octo-primary: #0a58ca;
+  --octo-accent: #0d9488;
+}
+
+body {
+  background: radial-gradient(circle at top right, #d9ecff 0%, transparent 40%),
+    linear-gradient(180deg, var(--octo-bg-start), var(--octo-bg-end));
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #ffffff 0%, #eef5ff 100%);
+}
+
+.app-nav {
+  background: #ffffff;
+  border: 1px solid #d7e3f7;
+}
+
+.app-nav .nav-link {
+  color: #21436f;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+}
+
+.app-nav .nav-link:hover {
+  background: #edf4ff;
+  color: #123357;
+}
+
+.app-nav .nav-link.active {
+  background: var(--octo-primary);
+  color: #ffffff;
+}
+
+.data-page {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(3px);
+}
+
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+.modal-backdrop {
+  opacity: 0.4;
+}
+
+@media (max-width: 991px) {
+  .app-nav .navbar-collapse {
+    margin-top: 0.75rem;
+  }
+}
