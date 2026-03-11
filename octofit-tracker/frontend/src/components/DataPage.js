@@ -20,12 +20,7 @@ function DataPage({ title, endpointPath, endpointLabel }) {
   const [selectedRow, setSelectedRow] = useState(null);
 
   const endpoint = useMemo(() => {
-    const codespace = process.env.REACT_APP_CODESPACE_NAME;
-    if (codespace) {
-      return `https://${codespace}-8000.app.github.dev/api/${endpointPath}/`;
-    }
-
-    return `http://localhost:8000/api/${endpointPath}/`;
+    return `/api/${endpointPath}/`;
   }, [endpointPath]);
 
   const fetchRows = useCallback(async () => {
